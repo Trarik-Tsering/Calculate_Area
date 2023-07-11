@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab - 8</title>
+
+    <!-- Internal CSS -->
+    <style>
+        .fields{
+            display:none;
+        }
+    </style>
+
+</head>
+<body>
+    <div align="center">
+        <h1>
+            Calculate Area for the shapes.
+        </h1>
+
+        <!-- Shape selection-->
+        <div>
+            <label for="shape">Shape</label>
+            <select name="shape" id="shape" onchange="shapeAreaCalculator();">
+                <option value="">Select the shape here -------</option>
+                <option value="circle">Circle</option>
+                <option value="square">Square</option>
+                <option value="cone">Cone</option>
+                <option value="rectangle">Rectangle</option>
+                <option value="cyclinder"> Cylinder</option>
+                <option value="traingle"> Triangle</option>
+            </select>
+        </div>
+
+        <!-- Input values for circle -->
+        <div id="circleArea" class="fields">
+            <form action="" onsubmit="return areaCalculator();"><br/>
+                <label for="radius"> Radius of the Circle: </label>
+                <input type="number" name="radius" id="radiusOfCircle" placeholder="Enter the Radius"><br/><br/>
+
+                <input type="submit" value="Calculate" >
+
+            </form>
+
+            <h3 id="circleAreaValue"></h3>
+        </div>
+
+        <!-- Input values for Square -->
+        <div id="squareArea" class="fields">
+            <form action="" onsubmit="return areaCalculator();" ><br/>
+                <label for="length"> Length of the Square: </label>
+                <input type="number" name="length" id="lenthOfsquare" placeholder="Enter the Length"><br/><br/>
+
+                <input type="submit" value="Calculate" >
+            </form>
+
+            <h3 id="squareAreaValue"></h3>
+        </div>
+
+        <!-- Input values for Rectangle -->
+        <div id="rectangleArea" class="fields">
+            <form action="" onsubmit="return areaCalculator();"><br/>
+                <label for="length"> Length of the Rectangle: </label>
+                <input type="number" name="length" id="lengthOfRectangle" placeholder="Enter the Length"><br/><br/>
+                <label for="length"> Width of the Rectangle: </label>
+                <input type="number" name="width" id="widthOfRectangle" placeholder="Enter the Width"><br/><br/>
+
+                <input type="submit" value="Calculate">
+            </form>
+
+            <h3 id="rectangleAreaValue"></h3>
+        </div>
+        
+       <!-- Input values for Cone -->
+       <div id="coneArea" class="fields">
+            <form action="" onsubmit="return areaCalculator();"><br/>
+                <label for="radius"> Radius of the Cone: </label>
+                    <input type="number" name="radius" id="radiusOfCone" placeholder="Enter the Radius"><br/><br/>
+                <label for="height"> Height of the Cone: </label>
+                <input type="number" name="width" id="heightOfCone" placeholder="Enter the Height"><br/><br/>
+
+                <input type="submit" value="Calculate">
+            </form>
+
+            <h3 id="coneAreaValue"></h3>
+        </div>
+
+        <!-- Input values for Cylinder -->
+        <div id="cylinderArea" class="fields">
+            <form action="" onsubmit="return areaCalculator();"><br/>
+                <label for="radius"> Radius of the Cylinder: </label>
+                    <input type="number" name="radius" id="radiusOfCylinder" placeholder="Enter the Radius"><br/><br/>
+                <label for="height"> Height of the Cylinder: </label>
+                <input type="number" name="width" id="heightOfCylinder" placeholder="Enter the Height"><br/><br/>
+
+                <input type="submit" value="Calculate">
+            </form>
+
+            <h3 id="cylinderAreaValue"></h3>
+        </div>
+
+        <!-- Input values for Traingle -->
+        <div id="traingleArea" class="fields">
+            <form action="" onsubmit="return areaCalculator();"><br/>
+                <label for="base"> Baselength of the Triangle: </label>
+                    <input type="number" name="radius" id="baselengthOfTraingle" placeholder="Enter the Length"><br/><br/>
+                <label for="height"> Height of the Cylinder: </label>
+                <input type="number" name="width" id="heightOfTraingle" placeholder="Enter the Height"><br/><br/>
+
+                <input type="submit" value="Calculate">
+            </form>
+
+            <h3 id="traingleAreaValue"></h3>
+        </div>
+    </div>
+
+    <script src="app8.js"></script>
+</body>
+</html>
